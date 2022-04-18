@@ -31,9 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,7 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cars',
-    'users'
+    'users',
+    'customer',
+    'dealership',
+    'supplier',
 ]
 
 MIDDLEWARE = [
