@@ -12,7 +12,7 @@ Clone `.env.example` file, rename it to `.env`.
 Run `PostgreSQL` docker container localy:
 
 ```sh
-$ docker run --name db -p 5432:5432 --env-file ./.env.example -d postgres:13.3
+$ docker run --name db -p 5432:5432 --env-file ./.env -d postgres:14
 ```
 
 And run the Django server:

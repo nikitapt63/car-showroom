@@ -31,6 +31,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+AUTH_USER_MODEL = 'users.User'   # Point User model
+
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
