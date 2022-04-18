@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+  db:
+    container_name: postgres
+    image: postgres:14
+    expose:
+      - 5432
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+
+  web:
+    container_name: backend
+    build:
+      context: ././
+      dockerfile: Dockerfile
+    command: bash -c "cd car_showroom &&
+                      python manage.py runserver 127.0.0.1:8000"
+    expose:
+      - 8000
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - db
