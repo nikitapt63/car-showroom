@@ -27,5 +27,3 @@ class User(AbstractBaseUser, PermissionsMixin, BaseModel):
 
     def __str__(self):
         return f'{self.email}, {self.name}'
-
-

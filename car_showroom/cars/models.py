@@ -25,4 +25,4 @@ class Car(models.Model):
     price = models.IntegerField(validators=[MinValueValidator(0)], verbose_name="Car's price($)")
 
     def __str__(self):
-        return f'{self.brand}, {self.model}, {self.year}, {self.price}, {self.brand},'
+        return f'{self.brand}, {self.model}, {self.year}, {self.price}, {self.brand}, {self.fuel_type}'
