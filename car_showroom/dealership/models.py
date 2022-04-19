@@ -9,7 +9,7 @@ class Dealership(models.Model):
     car = models.ForeignKey(Car, on_delete=models.CASCADE, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     location = CountryField(blank_label='(select country)', multiple=True)
-    balance = models.FloatField(verbose_name='Balance', editable=False)
+    balance = models.DecimalField(max_digits=9, decimal_places=2, verbose_name="Current balance in $")
 
     def __str__(self):
         return f'{self.user}, {self.location}, {self.balance}'
